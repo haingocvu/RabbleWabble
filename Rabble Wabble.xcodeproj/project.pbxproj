@@ -18,6 +18,7 @@
 		EC5A3DC32266BC550000F7BE /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A3DC22266BC550000F7BE /* QuestionView.swift */; };
 		EC62E6D3227ED4BD00869496 /* SelectQuestionGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC62E6D2227ED4BD00869496 /* SelectQuestionGroupViewController.swift */; };
 		EC62E6D5227ED87000869496 /* QuestionGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC62E6D4227ED87000869496 /* QuestionGroupCell.swift */; };
+		EC71C162227FC9C100687B52 /* QuestionViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC71C161227FC9C100687B52 /* QuestionViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		EC5A3DC22266BC550000F7BE /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		EC62E6D2227ED4BD00869496 /* SelectQuestionGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionGroupViewController.swift; sourceTree = "<group>"; };
 		EC62E6D4227ED87000869496 /* QuestionGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupCell.swift; sourceTree = "<group>"; };
+		EC71C161227FC9C100687B52 /* QuestionViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				EC16BBCE22663890005CF5C8 /* AppDelegate.swift */,
+				EC71C161227FC9C100687B52 /* QuestionViewControllerDelegate.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			files = (
 				EC16BBE622663CDC005CF5C8 /* Question.swift in Sources */,
 				EC16BBD122663890005CF5C8 /* QuestionViewController.swift in Sources */,
+				EC71C162227FC9C100687B52 /* QuestionViewControllerDelegate.swift in Sources */,
 				EC16BBCF22663890005CF5C8 /* AppDelegate.swift in Sources */,
 				EC16BBE822663D98005CF5C8 /* QuestionGroup.swift in Sources */,
 				EC5A3DC32266BC550000F7BE /* QuestionView.swift in Sources */,

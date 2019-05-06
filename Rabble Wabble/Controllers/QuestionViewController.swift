@@ -11,6 +11,8 @@ import UIKit
 //QuestionViewController is controller
 public class QuestionViewController: UIViewController {
 	
+	public weak var delegate: QuestionViewControllerDelegate?
+	
 	//questionGroup is model
 	public var questionGroup: QuestionGroup! {
 		didSet {
@@ -44,7 +46,18 @@ public class QuestionViewController: UIViewController {
 	
 	public override func viewDidLoad() {
 		super.viewDidLoad()
+		setupCancelButton()
 		showQuestion()
+	}
+	
+	func setupCancelButton() {
+		let action = #selector(handleCancelPress(sender:))
+		let image = UIImage(named: "ic_menu")
+		navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, landscapeImagePhone: nil, style: .plain, target: self, action: action)
+	}
+	
+	@objc private func handleCancelPress(sender: UIBarButtonItem) {
+		delegate?.questionViewController(self, didCancel: questionGroup, at: questionIndex)
 	}
 	
 	private func showQuestion() {
@@ -60,7 +73,10 @@ public class QuestionViewController: UIViewController {
 	
 	private func showNextQuestion() {
 		questionIndex += 1
-		guard questionIndex < questionGroup.questions.count else { return }
+		guard questionIndex < questionGroup.questions.count else {
+			delegate?.questionViewController(self, didComplete: questionGroup)
+			return
+		}
 		showQuestion()
 	}
 	
@@ -82,4 +98,3 @@ public class QuestionViewController: UIViewController {
 		showNextQuestion()
 	}
 }
-
