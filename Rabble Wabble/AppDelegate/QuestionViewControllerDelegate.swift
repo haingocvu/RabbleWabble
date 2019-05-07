@@ -9,6 +9,6 @@
 import UIKit
 
 public protocol QuestionViewControllerDelegate: class {
-	func questionViewController(_ controller: QuestionViewController, didCancel questionGroup: QuestionGroup, at questionIndex: Int)
-	func questionViewController(_ controller: QuestionViewController, didComplete questionGroup: QuestionGroup)
+	func questionViewController(_ controller: QuestionViewController, didCancel questionStrategy: QuestionStrategy, at questionIndex: Int)
+	func questionViewController(_ controller: QuestionViewController, didComplete questionStrategy: QuestionStrategy)
 }
