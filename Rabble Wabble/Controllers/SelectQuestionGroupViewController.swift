@@ -9,6 +9,7 @@
 import UIKit
 
 public class SelectQuestionGroupViewController: UIViewController {
+	private let appSettings = AppSettings.shared
 	@IBOutlet internal weak var tableView: UITableView! {
 		didSet {
 			tableView.tableFooterView = UIView()
@@ -40,7 +41,7 @@ extension SelectQuestionGroupViewController: UITableViewDelegate {
 	}
 	public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		guard let controller = segue.destination as? QuestionViewController else { return }
-		controller.questionStrategy = SequentialQuestionStrategy(questionGroup: selectedQuestionGroup)
+		controller.questionStrategy = appSettings.questionStrategy(for: selectedQuestionGroup)
 		controller.delegate = self
 	}
 }

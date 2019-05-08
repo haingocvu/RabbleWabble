@@ -15,6 +15,8 @@
 		EC16BBEA22663E1D005CF5C8 /* QuestionGroupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC16BBE922663E1D005CF5C8 /* QuestionGroupData.swift */; };
 		EC16BBEC22663ECC005CF5C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC16BBEB22663ECC005CF5C8 /* Assets.xcassets */; };
 		EC16BBEE22663F32005CF5C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC16BBED22663F32005CF5C8 /* LaunchScreen.storyboard */; };
+		EC45B85F2282716900F2C5EA /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC45B85E2282716900F2C5EA /* AppSettings.swift */; };
+		EC45B8612282781800F2C5EA /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC45B8602282781800F2C5EA /* AppSettingsViewController.swift */; };
 		EC5A3DC32266BC550000F7BE /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A3DC22266BC550000F7BE /* QuestionView.swift */; };
 		EC62E6D3227ED4BD00869496 /* SelectQuestionGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC62E6D2227ED4BD00869496 /* SelectQuestionGroupViewController.swift */; };
 		EC62E6D5227ED87000869496 /* QuestionGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC62E6D4227ED87000869496 /* QuestionGroupCell.swift */; };
@@ -35,6 +37,8 @@
 		EC16BBE922663E1D005CF5C8 /* QuestionGroupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionGroupData.swift; sourceTree = "<group>"; };
 		EC16BBEB22663ECC005CF5C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC16BBED22663F32005CF5C8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC45B85E2282716900F2C5EA /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		EC45B8602282781800F2C5EA /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
 		EC5A3DC22266BC550000F7BE /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		EC62E6D2227ED4BD00869496 /* SelectQuestionGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionGroupViewController.swift; sourceTree = "<group>"; };
 		EC62E6D4227ED87000869496 /* QuestionGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupCell.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				EC16BBE922663E1D005CF5C8 /* QuestionGroupData.swift */,
 				EC16BBE522663CDC005CF5C8 /* Question.swift */,
 				EC16BBE722663D98005CF5C8 /* QuestionGroup.swift */,
+				EC45B85E2282716900F2C5EA /* AppSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			children = (
 				EC16BBD022663890005CF5C8 /* QuestionViewController.swift */,
 				EC62E6D2227ED4BD00869496 /* SelectQuestionGroupViewController.swift */,
+				EC45B8602282781800F2C5EA /* AppSettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -213,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC45B85F2282716900F2C5EA /* AppSettings.swift in Sources */,
 				EC16BBE622663CDC005CF5C8 /* Question.swift in Sources */,
 				EC16BBD122663890005CF5C8 /* QuestionViewController.swift in Sources */,
 				EC71C162227FC9C100687B52 /* QuestionViewControllerDelegate.swift in Sources */,
@@ -223,6 +230,7 @@
 				EC6C1450228183E200BB1358 /* RandomQuestionStrategy.swift in Sources */,
 				EC6C144C22817C0400BB1358 /* QuestionStrategy.swift in Sources */,
 				EC16BBEA22663E1D005CF5C8 /* QuestionGroupData.swift in Sources */,
+				EC45B8612282781800F2C5EA /* AppSettingsViewController.swift in Sources */,
 				EC62E6D3227ED4BD00869496 /* SelectQuestionGroupViewController.swift in Sources */,
 				EC62E6D5227ED87000869496 /* QuestionGroupCell.swift in Sources */,
 			);

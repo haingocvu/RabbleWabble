@@ -168,7 +168,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vhj-ut-fIz"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Select Question Group" id="Nhj-i6-07y"/>
+                    <navigationItem key="navigationItem" title="Select Question Group" id="Nhj-i6-07y">
+                        <barButtonItem key="leftBarButtonItem" image="ic_settings" id="yRp-kX-Dtb">
+                            <connections>
+                                <segue destination="vfB-Qc-L17" kind="show" id="Dhp-9t-cAd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="bPA-bf-3yD" id="5Az-8X-FQc"/>
                     </connections>
@@ -176,6 +182,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZ2-8E-kyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="113.04347826086958" y="114.50892857142857"/>
+        </scene>
+        <!--App Settings-->
+        <scene sceneID="FU6-qi-RbS">
+            <objects>
+                <tableViewController title="App Settings" id="vfB-Qc-L17" customClass="AppSettingsViewController" customModule="Rabble_Wabble" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q1j-V0-gzn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="vfB-Qc-L17" id="PaJ-GD-PRR"/>
+                            <outlet property="delegate" destination="vfB-Qc-L17" id="TIa-am-Efh"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QRd-j4-MBE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="824"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ju4-6b-Dwq">
@@ -199,5 +223,6 @@
     <resources>
         <image name="ic_circle_check" width="80" height="80"/>
         <image name="ic_circle_x" width="80" height="80"/>
+        <image name="ic_settings" width="26" height="26"/>
     </resources>
 </document>
