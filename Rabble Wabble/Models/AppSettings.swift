@@ -24,8 +24,8 @@ public class AppSettings {
 			userDefault.set(newValue.rawValue, forKey: Keys.questionStrategy)
 		}
 	}
-	public func questionStrategy(for questionGroup: QuestionGroup) -> QuestionStrategy {
-		return questionStrategyType.questionStrategy(for: questionGroup)
+	public func questionStrategy(for questionGroupCaretaker: QuestionGroupCaretaker) -> QuestionStrategy {
+		return questionStrategyType.questionStrategy(for: questionGroupCaretaker)
 	}
 }
 
@@ -41,12 +41,12 @@ public enum QuestionStrategyType: Int, CaseIterable {
 			return "Sequential"
 		}
 	}
-	public func questionStrategy(for questionGroup: QuestionGroup) -> QuestionStrategy {
+	public func questionStrategy(for questionGroupCaretaker: QuestionGroupCaretaker) -> QuestionStrategy {
 		switch self {
 		case .random:
-			return randomQuestionStrategy(questionGroup: questionGroup)
+			return randomQuestionStrategy(questionGroupCaretaker: questionGroupCaretaker)
 		case .sequential:
-			return SequentialQuestionStrategy(questionGroup: questionGroup)
+			return SequentialQuestionStrategy(questionGroupCaretaker: questionGroupCaretaker)
 		}
 	}
 }

@@ -9,14 +9,34 @@
 import UIKit
 
 public class SelectQuestionGroupViewController: UIViewController {
+	
+	//MARK;- Life cycle
+	public override func viewDidLoad() {
+		super.viewDidLoad()
+		questionGroups.forEach {
+			print("\($0.title). correct count: \($0.score.correctCount). incorrect count: \($0.score.incorrectCount)")
+		}
+	}
 	private let appSettings = AppSettings.shared
 	@IBOutlet internal weak var tableView: UITableView! {
 		didSet {
 			tableView.tableFooterView = UIView()
 		}
 	}
-	public var questionGroups = QuestionGroup.allGroups()
-	private var selectedQuestionGroup: QuestionGroup!
+	private let questionGroupCaretaker = QuestionGroupCaretaker()
+	private var questionGroups: [QuestionGroup] {
+		get {
+			return questionGroupCaretaker.questionGroups
+		}
+	}
+	private var selectedQuestionGroup: QuestionGroup! {
+		get {
+			return questionGroupCaretaker.selectedQuestionGroup
+		}
+		set {
+			questionGroupCaretaker.selectedQuestionGroup = newValue
+		}
+	}
 }
 
 extension SelectQuestionGroupViewController: UITableViewDataSource {
@@ -41,7 +61,7 @@ extension SelectQuestionGroupViewController: UITableViewDelegate {
 	}
 	public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		guard let controller = segue.destination as? QuestionViewController else { return }
-		controller.questionStrategy = appSettings.questionStrategy(for: selectedQuestionGroup)
+		controller.questionStrategy = appSettings.questionStrategy(for: questionGroupCaretaker)
 		controller.delegate = self
 	}
 }
